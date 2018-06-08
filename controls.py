@@ -36,14 +36,14 @@ def toggle() -> None:
 def breathe(step: int, sleeptime: float) -> None:
     for i in range(0, 100 + step, step):
         set_brightness(i)
-        print(i)
         sleep(sleeptime)
 
     for i in range(100, 0 - step, -1 * step):
         set_brightness(i)
-        print(i)
         sleep(sleeptime)
 
 
 if __name__ == "__main__":
-    breathe(3, 0.01)
+    for i in range(3):
+        breathe(3, 0.01)
+
